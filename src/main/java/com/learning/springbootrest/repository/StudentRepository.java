@@ -1,6 +1,6 @@
 package com.learning.springbootrest.repository;
 
-import com.learning.springbootrest.bean.Student;
+import com.learning.springbootrest.entity.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface StudentRepository extends JpaRepository<Student, Long> {

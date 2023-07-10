@@ -1,4 +1,4 @@
-package com.learning.springbootrest.bean;
+package com.learning.springbootrest.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
