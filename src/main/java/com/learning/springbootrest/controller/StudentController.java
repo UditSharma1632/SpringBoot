@@ -1,5 +1,6 @@
 package com.learning.springbootrest.controller;
 
+import com.learning.springbootrest.dto.StudentDto;
 import com.learning.springbootrest.entity.Student;
 import com.learning.springbootrest.service.StudentService;
 import lombok.AllArgsConstructor;
@@ -17,41 +18,40 @@ public class StudentController {
 
     StudentService studentService;
 
-    // post request
-    //    @ResponseStatus(HttpStatus.CREATED)
+    // post request using dto object
     @PostMapping("create")
-    public ResponseEntity<Student> createStudent(@RequestBody Student student){
-        student = studentService.createStudent(student);
+    public ResponseEntity<StudentDto> createStudent(@RequestBody StudentDto studentDto){
+        StudentDto student = studentService.createStudent(studentDto);
         return new ResponseEntity<>(student, HttpStatus.CREATED);
     }
 
-    // get method using path variable as http://localhost:8080/students/get/1
+    // get method using dto object
 
     @GetMapping("get/{id}")
-    public ResponseEntity<Student> getStudent(@PathVariable("id") Long id){
-       Student student = studentService.getStudentById(id);
-        return ResponseEntity.ok(student);
+    public ResponseEntity<StudentDto> getStudent(@PathVariable("id") Long id){
+       StudentDto studentDto = studentService.getStudentById(id);
+        return ResponseEntity.ok(studentDto);
     }
 
-    // get method using request param as http://localhost:8080/students/get?id=1
+    // get method using dto object
     @GetMapping("get")
-    public ResponseEntity<Student> getStudentByParam(@RequestParam Long id){
-        Student student = studentService.getStudentById(id);
-        return ResponseEntity.ok(student);
+    public ResponseEntity<StudentDto> getStudentByParam(@RequestParam Long id){
+        StudentDto studentDto = studentService.getStudentById(id);
+        return ResponseEntity.ok(studentDto);
     }
 
     // get method to obtain every user from db
     @GetMapping("getAll")
-    public ResponseEntity<List<Student>> getStudents(){
-        List<Student> student = studentService.getAll();
-        return ResponseEntity.ok(student);
+    public ResponseEntity<List<StudentDto>> getStudents(){
+        List<StudentDto> studentDto = studentService.getAll();
+        return ResponseEntity.ok(studentDto);
     }
 
     // update method to update student details
     @PutMapping("update/{id}")
-    public ResponseEntity<Student> getStudent(@PathVariable Long id, @RequestBody Student student){
-        student.setId(id);
-        Student updatedStudent = studentService.updateStudent(student);
+    public ResponseEntity<StudentDto> getStudent(@PathVariable Long id, @RequestBody StudentDto studentDto){
+        studentDto.setId(id);
+        StudentDto updatedStudent = studentService.updateStudent(studentDto);
         return ResponseEntity.ok(updatedStudent);
     }
 

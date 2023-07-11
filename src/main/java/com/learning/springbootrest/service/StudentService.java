@@ -1,18 +1,19 @@
 package com.learning.springbootrest.service;
 
+import com.learning.springbootrest.dto.StudentDto;
 import com.learning.springbootrest.entity.Student;
 
 import java.util.List;
 
 public interface StudentService {
 
-    Student createStudent(Student student);
+    StudentDto createStudent(StudentDto student);
 
-    Student getStudentById(Long id);
+    StudentDto getStudentById(Long id);
 
-    List<Student> getAll();
+    List<StudentDto> getAll();
 
-    Student updateStudent(Student student);
+    StudentDto updateStudent(StudentDto studentDto);
 
     void deleteStudent(Long id);
 }
