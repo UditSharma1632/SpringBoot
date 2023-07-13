@@ -1,15 +1,14 @@
 package com.learning.springbootrest.controller;
 
 import com.learning.springbootrest.dto.StudentDto;
-import com.learning.springbootrest.entity.Student;
 import com.learning.springbootrest.service.StudentService;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
-import java.util.Optional;
+
 
 @RestController
 @AllArgsConstructor
@@ -20,7 +19,7 @@ public class StudentController {
 
     // post request using dto object
     @PostMapping("create")
-    public ResponseEntity<StudentDto> createStudent(@RequestBody StudentDto studentDto){
+    public ResponseEntity<StudentDto> createStudent(@RequestBody @Valid StudentDto studentDto){
         StudentDto student = studentService.createStudent(studentDto);
         return new ResponseEntity<>(student, HttpStatus.CREATED);
     }
@@ -49,7 +48,7 @@ public class StudentController {
 
     // update method to update student details
     @PutMapping("update/{id}")
-    public ResponseEntity<StudentDto> getStudent(@PathVariable Long id, @RequestBody StudentDto studentDto){
+    public ResponseEntity<StudentDto> getStudent(@PathVariable Long id, @RequestBody @Valid StudentDto studentDto){
         studentDto.setId(id);
         StudentDto updatedStudent = studentService.updateStudent(studentDto);
         return ResponseEntity.ok(updatedStudent);
