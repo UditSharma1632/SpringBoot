@@ -1,7 +1,6 @@
-package com.learning.springbootrest.service;
+package com.learning.springboot.rest.service;
 
-import com.learning.springbootrest.dto.StudentDto;
-import com.learning.springbootrest.entity.Student;
+import com.learning.springboot.rest.dto.StudentDto;
 
 import java.util.List;
 
