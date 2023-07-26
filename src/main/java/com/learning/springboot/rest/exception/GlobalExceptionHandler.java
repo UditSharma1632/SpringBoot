@@ -1,4 +1,4 @@
-package com.learning.springbootrest.exception;
+package com.learning.springboot.rest.exception;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package com.learning.springbootrest.exception;
+package com.learning.springboot.rest.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

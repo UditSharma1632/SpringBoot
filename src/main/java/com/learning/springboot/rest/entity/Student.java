@@ -1,10 +1,9 @@
-package com.learning.springbootrest.entity;
+package com.learning.springboot.rest.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.validation.annotation.Validated;
 
 @Data
 @AllArgsConstructor

@@ -1,4 +1,4 @@
-package com.learning.springbootrest;
+package com.learning.springboot;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Contact;

@@ -1,10 +1,10 @@
-package com.learning.springbootrest.service;
+package com.learning.springboot.rest.service;
 
-import com.learning.springbootrest.dto.StudentDto;
-import com.learning.springbootrest.entity.Student;
-import com.learning.springbootrest.exception.EmailAlreadyExistsException;
-import com.learning.springbootrest.exception.ResourceNotFoundException;
-import com.learning.springbootrest.repository.StudentRepository;
+import com.learning.springboot.rest.dto.StudentDto;
+import com.learning.springboot.rest.entity.Student;
+import com.learning.springboot.rest.exception.EmailAlreadyExistsException;
+import com.learning.springboot.rest.exception.ResourceNotFoundException;
+import com.learning.springboot.rest.repository.StudentRepository;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;

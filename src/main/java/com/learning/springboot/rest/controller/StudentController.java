@@ -1,7 +1,7 @@
-package com.learning.springbootrest.controller;
+package com.learning.springboot.rest.controller;
 
-import com.learning.springbootrest.dto.StudentDto;
-import com.learning.springbootrest.service.StudentService;
+import com.learning.springboot.rest.dto.StudentDto;
+import com.learning.springboot.rest.service.StudentService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -119,5 +119,7 @@ public class StudentController {
         studentService.deleteStudent(id);
         return ResponseEntity.ok("User deleted");
     }
+
+
 
 }

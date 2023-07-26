@@ -1,6 +1,6 @@
-package com.learning.springbootrest.repository;
+package com.learning.springboot.rest.repository;
 
-import com.learning.springbootrest.entity.Student;
+import com.learning.springboot.rest.entity.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
